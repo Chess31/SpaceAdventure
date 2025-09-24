@@ -19,7 +19,7 @@ function text_adventure_init() {
     text_timer = 0;
     text_position = 0;
     show_choices = false;
-    current_text = ""; // Initialize current_text to prevent undefined errors
+    current_text = "";
     
     // Load story scenes
     load_story_scenes();
@@ -80,8 +80,8 @@ function text_adventure_start_scene(scene_id) {
 function text_adventure_update() {
     text_timer++;
     
-    // Simple typewriter effect
-    if (text_timer >= 2 && text_position < string_length(current_text)) {
+    // typewriter findme
+    if (text_timer >= 1 && text_position < string_length(current_text)) {
         text_position++;
         text_timer = 0;
     }
@@ -205,7 +205,7 @@ function text_adventure_draw() {
 	draw_set_color(c_green);
     for (var i = 0; i < array_length(lines); i++) {
         draw_text(text_area_x + 20, y_pos, lines[i]); // Add padding inside border
-        y_pos += 25;
+        y_pos += 30;
     }
     
     // Define choices area (bottom right section) - always draw border

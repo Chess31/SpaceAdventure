@@ -1,10 +1,10 @@
 /// @description Game Setup
 
 // CRT Effect Parameters
-barrel_power = 1.03;        // Barrel distortion: 0.5 = strong, 1.0 = none, 1.5 = pincushion
-scanline_intensity = 0.1;  // Scanline darkness: 0.0 = none, 1.0 = very dark
+barrel_power = 1.05;        // Barrel distortion: 0.5 = strong, 1.0 = none, 1.5 = pincushion
+scanline_intensity = 0.5;  // Scanline darkness: 0.0 = none, 1.0 = very dark
 vignette_strength = 0.3;   // Vignette darkness: 0.0 = none, 1.0 = very dark
-color_bleeding = 0.08;     // Color bleeding: 0.0 = none, 1.0 = strong
+color_bleeding = 0.20;     // Color bleeding: 0.0 = none, 1.0 = strong
 
 //set font for text
 draw_set_font(ft_Retro);
