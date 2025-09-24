@@ -6,6 +6,7 @@ globalvar text_position;
 globalvar show_choices;
 globalvar current_scene;
 globalvar story_scenes;
+globalvar current_crew_message;
 
 // Initialize
 function text_adventure_init() {
@@ -16,6 +17,7 @@ function text_adventure_init() {
     text_position = 0;
     show_choices = false;
     current_text = "";
+    current_crew_message = "";
     
     // Load story scenes
     load_story_scenes();
@@ -63,8 +65,20 @@ function text_adventure_start_scene(scene_id) {
     // Handle both struct and ds_map scene data
     if (is_struct(scene)) {
         current_text = variable_struct_get(scene, "text");
+        // Check for alternate field (crew message)
+        if (variable_struct_exists(scene, "alternate")) {
+            current_crew_message = variable_struct_get(scene, "alternate");
+        } else {
+            current_crew_message = "";
+        }
     } else {
         current_text = scene[? "text"];
+        // Check for alternate field (crew message)
+        if (ds_map_exists(scene, "alternate")) {
+            current_crew_message = scene[? "alternate"];
+        } else {
+            current_crew_message = "";
+        }
     }
     
     text_position = 0;
@@ -176,7 +190,7 @@ function text_adventure_draw() {
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     
-    // Define text area (upper left section)
+    // Define text area (left section)
     var text_area_x = 50;
     var text_area_y = 50;
     var text_area_width = room_width / 2 + 100; // Half screen width minus margins
@@ -217,6 +231,34 @@ function text_adventure_draw() {
     // Draw title for choices area
     draw_set_color(c_yellow);
     draw_text(choice_area_x + 20, choice_area_y + 5, "COMMAND LINE:");
+    
+    // Define crew messages area (upper right section)
+    var crew_area_x = room_width / 2 + 250;
+    var crew_area_y = 50;
+    var crew_area_width = room_width / 2 - 300;
+    var crew_area_height = room_height / 2 - 50;
+    
+    // Draw border around crew messages area
+    draw_set_color(c_green);
+    draw_rectangle(crew_area_x, crew_area_y, crew_area_x + crew_area_width, crew_area_y + crew_area_height, true);
+    
+    // Draw title for crew messages area
+    draw_set_color(c_yellow);
+    draw_text(crew_area_x + 20, crew_area_y + 5, "CREW MESSAGES:");
+    
+    // Draw crew message if available
+    if (current_crew_message != "") {
+        var crew_inner_width = crew_area_width - 40; // account for left/right padding
+        var wrapped_crew_message = wrap_text(current_crew_message, crew_inner_width);
+        var crew_lines = string_split(wrapped_crew_message, "\n");
+        
+        var crew_y_pos = crew_area_y + 35; // Add padding inside border + space for title
+        draw_set_color(c_green);
+        for (var i = 0; i < array_length(crew_lines); i++) {
+            draw_text(crew_area_x + 20, crew_y_pos, crew_lines[i]); // Add padding inside border
+            crew_y_pos += 30;
+        }
+    }
     
     // Draw choices if ready
     if (show_choices) {
