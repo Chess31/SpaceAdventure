@@ -1,7 +1,3 @@
-/// @description Simple Text Adventure Engine
-/// @author AI Assistant
-/// @version 1.0
-
 // global variables
 globalvar current_text;
 globalvar current_choice;
@@ -184,7 +180,7 @@ function text_adventure_draw() {
     var text_area_x = 50;
     var text_area_y = 50;
     var text_area_width = room_width / 2 + 100; // Half screen width minus margins
-    var text_area_height = room_height / 2 - 50; // Half screen height minus margins
+    var text_area_height = room_height - 100; // Half screen height minus margins
     
     // Draw border around story text area
     draw_set_color(c_green);
@@ -208,10 +204,10 @@ function text_adventure_draw() {
         y_pos += 30;
     }
     
-    // Define choices area (bottom right section) - always draw border
-    var choice_area_x = room_width / 2 + 50;
+    // Define choices area (bottom right section)
+    var choice_area_x = room_width / 2 + 250;
     var choice_area_y = room_height / 2 + 50;
-    var choice_area_width = room_width / 2 - 100;
+    var choice_area_width = room_width / 2 - 300;
     var choice_area_height = room_height / 2 - 100;
     
     // Draw border around choices area
@@ -220,7 +216,7 @@ function text_adventure_draw() {
     
     // Draw title for choices area
     draw_set_color(c_yellow);
-    draw_text(choice_area_x + 20, choice_area_y + 5, "CHOICES");
+    draw_text(choice_area_x + 20, choice_area_y + 5, "COMMAND LINE:");
     
     // Draw choices if ready
     if (show_choices) {
@@ -237,16 +233,30 @@ function text_adventure_draw() {
         // Position choices inside the border
         var choice_x = choice_area_x + 20; // Add padding inside border
         var choice_y = choice_area_y + 50; // Add padding inside border + space for title
-        
+        var choice_line_height = 30;
+        var choice_inner_width = choice_area_width - 40; // account for left/right padding
+
+        // Draw each choice with word wrapping similar to the ship log
         for (var i = 0; i < array_length(choices); i++) {
-            var choice_text = string(i + 1) + ". " + choices[i];
+            var choice_prefix = string(i + 1) + ". ";
+            var choice_text_full = choice_prefix + string(choices[i]);
+
+            var wrapped_choice = wrap_text(choice_text_full, choice_inner_width);
+            var wrapped_lines = string_split(wrapped_choice, "\n");
+
             if (i == current_choice) {
-                draw_set_color(c_yellow); // Highlight selected choice
-                draw_text(choice_x, choice_y + (i * 30), "   " + choice_text);
+                draw_set_color(c_yellow); // Highlight selected choice block
             } else {
                 draw_set_color(c_green);
-                draw_text(choice_x, choice_y + (i * 30), "  " + choice_text);
             }
+
+            for (var j = 0; j < array_length(wrapped_lines); j++) {
+                draw_text(choice_x, choice_y, wrapped_lines[j]);
+                choice_y += choice_line_height;
+            }
+
+            // Add a small gap between choices
+            choice_y += 6;
         }
     }
     

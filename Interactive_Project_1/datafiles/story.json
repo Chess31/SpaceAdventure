@@ -1,16 +1,16 @@
 {
   "start": {
-    "text": "\nWelcome to your new ship captain! I’ve heard it's your first day as a space explorer… How exciting! I'll be sure to take great care of you during our travels together. Just read everything I say here to learn about what is happening around you. I’ll automatically describe what's around us, so you can make the best possible decisions on what to do. Space exploration has never been simpler!\n\nAnyway, it looks like you have some messages from the station. I can read them to you here.",
+    "text": "\nWelcome to your new ship captain! I've heard it's your first day as a space explorer... How exciting! I'll be sure to take great care of you during our travels together. Just read everything I say here to learn about what is happening around you. I'll automatically describe what's around us, so you can make the best possible decisions on what to do. Space exploration has never been simpler!\n\nAnyway, it looks like you have some messages from the station. I can read them to you here.",
     "choices": ["Listen to the messages.", "Who exactly are you?"],
     "outcomes": ["message_01", "whoAreYou"]
   },
   "message_01": {
-    "text": "\nRight away captain.\n\nHi dear its your parents. Congratulations on graduating from the station’s training program. As you know, all children of the station must choose the home planet of one of their parents to call their own. Your father’s home is Cryod, a small planet orbiting a black hole. My home is Kenda, a distant world orbiting a stable star. We wish you the best no matter where you choose to go. Love, mom and dad.",
-    "choices": ["I choose Kenda.", "I choose Croyd."],
+    "text": "\nRight away captain.\n\nHi dear its your parents. Congratulations on graduating from the station's training program. As you know, all children of the station must choose the home planet of one of their parents to call their own. Your father's home is Cryod, a small planet orbiting a black hole. My home is Kenda, a distant world orbiting a stable star. We wish you the best no matter where you choose to go.\n\nLove,\nMom and Dad.",
+    "choices": ["Choose Kenda.", "Choose Croyd."],
     "outcomes": ["Kenda", "Croyd"]
   },
   "whoAreYou": {
-    "text": "\nI’m your on board computer! All of the station’s new ships are now manufactured with me pre-installed. I come equipped with a great new system to make your life easier. Like I mentioned before, my sensors will collect data about what happens around the ship, so all you have to do is read this terminal. I can take care of pretty much everything else! That way you don’t have to spend your valuable time doing annoying tasks like looking at things, understanding your surroundings, or talking with your crew.\n\nLet’s listen to those messages now shall we?",
+    "text": "\nI'm your on board computer! All of the station's new ships are now manufactured with me pre-installed. I come equipped with a great new system to make your life easier. Like I mentioned before, my sensors will collect data about what happens around the ship, so all you have to do is read this terminal. I can take care of pretty much everything else! That way you don't have to spend your valuable time doing annoying tasks like looking at things, understanding your surroundings, or talking with your crew.\n\nLet's listen to those messages now shall we?",
     "choices": ["On second thought, let's head back to the station.", "Alright... Let's hear the messages."],
     "outcomes": ["backToStation", "message_01"]
   },
@@ -20,12 +20,12 @@
     "outcomes": ["message_01", "backToStation2"]
   },
   "Kenda": {
-    "text": "\nKenda is a paradise of rich soil and family connections. I’m certain you’ll love it there. I'll chart a course there immediately!",
+    "text": "\nKenda is a paradise of rich soil and family connections. I'm certain you'll love it there. I'll chart a course there immediately!",
     "choices": ["Excellent"],
     "outcomes": ["Kenda_02"]
   },
   "Croyd": {
-    "text": "\nCroyd is a wonderful choice, captain. The biodiversity of Croyd is a beautiful thing to witness. I’m certain you’ll love it there. I'll chart a course there immediately!",
+    "text": "\nCroyd is a wonderful choice, captain. The biodiversity of Croyd is a beautiful thing to witness. I'm certain you'll love it there. I'll chart a course there immediately!",
     "choices": ["Excellent"],
     "outcomes": ["Cryod_02"]
   },
@@ -60,7 +60,7 @@
     "outcomes": ["radiation"]
   },
   "radiation": {
-    "text": "\nThe ship lurches forward as the stars begin to zoom by. Static creeps across the comms panel as we pick up speed. Suddenly you hear a series of smashes echo through the hull as fragments of icy meteors crash against the ship’s shielding.\n\nAttention, Captain. We have entered an uncharted nebula. Nothing to be too concerned about...\n\n<Radiation levels increasing>\n<Shield durability 63%>\n\nOn second thought, we should consider radioing for help, captain. Sustained exposure to this level of radiation could be detrimental to our mission. There are a few openings I see in the asteroid field that I could try to navigate us through, if fancy flying is more your style.",
+    "text": "\nThe ship lurches forward as the stars begin to zoom by. Static creeps across the comms panel as we pick up speed. Suddenly you hear a series of smashes echo through the hull as fragments of icy meteors crash against the ship's shielding.\n\nAttention, Captain. We have entered an uncharted nebula. Nothing to be too concerned about...\n\n<Radiation levels increasing>\n<Shield durability 63%>\n\nOn second thought, we should consider radioing for help, captain. Sustained exposure to this level of radiation could be detrimental to our mission. There are a few openings I see in the asteroid field that I could try to navigate us through, if fancy flying is more your style.",
     "choices": ["Send an S.O.S, we need help now.", "Chart a course through the nebula, and be careful!"],
     "outcomes": ["radioForHelp", "pressThroughNebula"]
   },
@@ -75,7 +75,7 @@
     "outcomes": ["JoinPirates", "radioForHelp"]
   },
   "JoinPirates": {
-    "text": "\nA grainy hologram sputters to life across your console. Admiral Sirfuli leans back in a captain’s chair.\n\nSirfuli: 'Ha! A bold one, aren’t you? Not many ships answer us without their guns drawn. I like that. Guts go a long way out here.'\n\n'Your ship looks pretty beat up. Maybe we can strike up a deal? Listen carefully now. We’re no band of lawless pirates. Not anymore. Our homeworld, Kenda, rots under the fist of tyrannical autocrats and their 'experiments'. They lock us in orbit, starve us, quarantine entire continents, and call it ‘protection.’ Protection! It's outrageous.'\n\n'We aim to burn their blockade and free our world. So you’ve got a choice. Vow to fight with us, and in return your ship will be repaired. Turn down our offer, and you drift back to wherever you came from.'\n\nSo what'll it be, captain?",
+    "text": "\nA grainy hologram sputters to life across your console. Admiral Sirfuli leans back in a captain's chair.\n\nSirfuli: 'Ha! A bold one, aren't you? Not many ships answer us without their guns drawn. I like that. Guts go a long way out here.'\n\n'Your ship looks pretty beat up. Maybe we can strike up a deal? Listen carefully now. We're no band of lawless pirates. Not anymore. Our homeworld, Kenda, rots under the fist of tyrannical autocrats and their 'experiments'. They lock us in orbit, starve us, quarantine entire continents, and call it 'protection.' Protection! It's outrageous.'\n\n'We aim to burn their blockade and free our world. So you've got a choice. Vow to fight with us, and in return your ship will be repaired. Turn down our offer, and you drift back to wherever you came from.'\n\nSo what'll it be, captain?",
     "choices": ["No way, I'm not siding with pirates.", "Alright, let's go free Kenda."],
     "outcomes": ["AcademyShowsUp", "mermahAfterPirates"]
   },
@@ -85,25 +85,25 @@
     "outcomes": ["meetSpaceAcademy", "wormhole_02"]
   },
   "meetSpaceAcademy": {
-    "text": "\nThey're opening up a comms channel:\n\nAcademy Officer: ‘Greetings captain. You’re a recent graduate, aren’t you? Our records show your registration. These flight exercises simulate gravitational interference scenarios. Wormholes are unpredictable. They test navigation, discipline, and precision. The kind of skills required to keep chaos from consuming the galaxy.’\n\n‘We have room for a few more ships in our armada. Consider joining our ranks. A recent graduate like yourself would be most welcome.’",
+    "text": "\nThey're opening up a comms channel:\n\nAcademy Officer: 'Greetings captain. You're a recent graduate, aren't you? Our records show your registration. These flight exercises simulate gravitational interference scenarios. Wormholes are unpredictable. They test navigation, discipline, and precision. The kind of skills required to keep chaos from consuming the galaxy.'\n\n'We have room for a few more ships in our armada. Consider joining our ranks. A recent graduate like yourself would be most welcome.'",
     "choices": ["Enlist with the Academy.", "Head through the wormhole. I'd rather not sign up with the Academy again."],
     "outcomes": ["encounterPirates", "wormhole_02"]
   },
   "wormhole_02": {
-    "text": "\nThe wormhole tears at the hull plating as the ship lurches sideways. A blinding pulse of light surges through the cabin. Lights flicker, and sensors scramble into nonsense. For a moment, everything is silent except the hum of emergency power.\n\nI need to perform a partial reboot... this should only take a moment.\n\n<System Restart Initiated>\n<Please stand by, restart 78% complete>\n<System restart complete!>\n\nLooks like we've stumbled into the range of station SR-401b. I wonder why they are hiding out near an active wormhole? Let's see what they want. Comm channel now open:\n\n‘This is station SR-401b, currently under the command of admiral Sirfuli. It appears your ship has recently been damaged, are you in need of assistance?’\n\nHold on captain, Sirfuli is the name of the leader of a ruthless crew of space pirates. It might be best to withhold our trust.",
+    "text": "\nThe wormhole tears at the hull plating as the ship lurches sideways. A blinding pulse of light surges through the cabin. Lights flicker, and sensors scramble into nonsense. For a moment, everything is silent except the hum of emergency power.\n\nI need to perform a partial reboot... this should only take a moment.\n\n<System Restart Initiated>\n<Please stand by, restart 78% complete>\n<System restart complete!>\n\nLooks like we've stumbled into the range of station SR-401b. I wonder why they are hiding out near an active wormhole? Let's see what they want. Comm channel now open:\n\n'This is station SR-401b, currently under the command of admiral Sirfuli. It appears your ship has recently been damaged, are you in need of assistance?'\n\nHold on captain, Sirfuli is the name of the leader of a ruthless crew of space pirates. It might be best to withhold our trust.",
     "choices": ["Respond to the message! Let them know we are friendly.", "I'd rather not risk running into pirates. We can fend for ourselves."],
     "outcomes": ["JoinPirates", "AcademyShowsUp"]
   },
   "mermahWakesUp": {
-    "text": "\nDiverting power to communication networks... I can see what frequency they are messaging us on. Boosting the channel now.\n\n…Curious. We’ve received a response. Non-standard encoding. I still cannot fully translate the signal. I advise ignoring it. They may be hostile.\n\n<Automated sensor readout: Unauthorized cryo bay activity. Pod door 4 has been opened. Footsteps detected inside ship.>\n\nAh... my apologies captain. That last alert is almost certainly a nebula-induced malfunction. Radiation sometimes produces… phantom alerts. You may disregard it.",
+    "text": "\nDiverting power to communication networks... I can see what frequency they are messaging us on. Boosting the channel now.\n\n...Curious. We've received a response. Non-standard encoding. I still cannot fully translate the signal. I advise ignoring it. They may be hostile.\n\n<Automated sensor readout: Unauthorized cryo bay activity. Pod door 4 has been opened. Footsteps detected inside ship.>\n\nAh... my apologies captain. That last alert is almost certainly a nebula-induced malfunction. Radiation sometimes produces... phantom alerts. You may disregard it.",
     "choices": ["Keep trying to translate the signal, they might be able to help us.", "The signal can wait, what's going on in the cryo bay?"],
     "outcomes": ["RespondToAliens", "InvestigateCryoBay"]
   },
   "RespondToAliens": {
-    "text": "\nI've managed to decipher a few fragments of the message. I've never seen writing like this before. We're dealing with a lot of unknowns…\n\nMy best guess is that they're broadcasting a question. Something like ‘Do you seek... us... do you need... us’\n\nTheir meaning is still uncertain. Recommended response: No\n\nHow should we proceed, captain?",
+    "text": "\nI've managed to decipher a few fragments of the message. I've never seen writing like this before. We're dealing with a lot of unknowns...\n\nMy best guess is that they're broadcasting a question. Something like 'Do you seek... us... do you need... us'\n\nTheir meaning is still uncertain. Recommended response: No\n\nHow should we proceed, captain?",
     "choices": ["Yes", "No"],
     "outcomes": ["aliensApproach", "fightAliens"],
-    "alternate": ["…I don’t know if anyone’s even alive on the other side of this. I just woke up - most of my memory is… missing. But listen, if there’s something out there asking if we need help, my gut says we should answer Yes."]
+    "alternate": ["...I don't know if anyone's even alive on the other side of this. I just woke up - most of my memory is... missing. But listen, if there's something out there asking if we need help, my gut says we should answer Yes."]
   },
   "InvestigateCryoBay": {
     "text": "\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>",
@@ -111,7 +111,7 @@
     "outcomes": ["mermahMessage_01", "RespondToAliens"]
   },
   "mermahMessage_01": {
-    "text": "\nHere is the message from the cryo bay. Like I said before, this is likely a radiation induced malfunction. Don't be surprised if the message is unreadable…\n\n’Hello, is anyone there? My cryo pod seems to have defrosted prematurely. If someone on board receives this message, please open a comms channel with the cryo bay terminal.’",
+    "text": "\nHere is the message from the cryo bay. Like I said before, this is likely a radiation induced malfunction. Don't be surprised if the message is unreadable...\n\n'Hello, is anyone there? My cryo pod seems to have defrosted prematurely. If someone on board receives this message, please open a comms channel with the cryo bay terminal.'",
     "choices": ["Open comms channel to the cryo bay.", "Definetly looks like a malfunction, let's work on deciphering the unknown signal."],
     "outcomes": ["mermah_02", "RespondToAliens"]
   },
@@ -121,19 +121,19 @@
     "outcomes": ["aliensApproach", "fightAliens"]
   },
   "aliensApproach": {
-    "text": "\nIn a fraction of a second an alien cruiser appears in front of our ship. There is no trace of which direction it came from.\n\n<Automated sensor readout: Unknown lifeform(s) detected on board>\n\nLights flicker. Space begins to fold in on itself - and alien figures warp inside the ship. Their forms are partially obscured by distortion, shimmering like they’re only half in this dimension.\n\nThe beings emit low jumbled tones and rhythmic pulses of light. They begin merging together. A handful of bipedal aliens now stand behind you.\n\nThey are attempting to mirror your physical form, captain. How do you want to handle this?",
+    "text": "\nIn a fraction of a second an alien cruiser appears in front of our ship. There is no trace of which direction it came from.\n\n<Automated sensor readout: Unknown lifeform(s) detected on board>\n\nLights flicker. Space begins to fold in on itself - and alien figures warp inside the ship. Their forms are partially obscured by distortion, shimmering like they're only half in this dimension.\n\nThe beings emit low jumbled tones and rhythmic pulses of light. They begin merging together. A handful of bipedal aliens now stand behind you.\n\nThey are attempting to mirror your physical form, captain. How do you want to handle this?",
     "choices": ["Let's try talking with them. Maybe we'll better understand each other now that our physical forms are similar.", "We need to secure the ship... prepare to attack."],
     "outcomes": ["goWithAliens01", "PreFightAliens"],
     "alternate": ["Teleportation? That's some pretty rare tech. I've only seen it used this effectively by the... wait... I know this... why can't I remember. And why do I still feel so cold?"]
   },
   "fightAliens": {
-    "text": "\nThe aliens prepare for battle. Your actions have been deemed hostile…\n\nBeams of crystallized plasma begin to slam against the hull, violently shaking the ship and knocking panels loose. Each beam explodes into a shower of iridescent fractals as it hits the ship.\n\n<Automated sensor readout: Shield integrity 29%>\n<Life support failing>\n<Shutting down non essential systems>\n\nOutside, the alien vessel launches another barrage of prismatic energy bolts.\n\nWhat a beautiful sight, captain. How ironic is it that we are being blown to pieces by something so spectacular…\n\n<Automated sensor readout: Shield integrity 4%>\n\nI'm afraid this is out of my control, captain. It's been a pleasure.\n\n<Automated sensor readout: Time dilation detected. Clocks now running in reverse.>\n\nWait, their barrage stopped... and we've detected a time anomaly? Is this what they're doing? I suppose we'll never know...",
+    "text": "\nThe aliens prepare for battle. Your actions have been deemed hostile...\n\nBeams of crystallized plasma begin to slam against the hull, violently shaking the ship and knocking panels loose. Each beam explodes into a shower of iridescent fractals as it hits the ship.\n\n<Automated sensor readout: Shield integrity 29%>\n<Life support failing>\n<Shutting down non essential systems>\n\nOutside, the alien vessel launches another barrage of prismatic energy bolts.\n\nWhat a beautiful sight, captain. How ironic is it that we are being blown to pieces by something so spectacular...\n\n<Automated sensor readout: Shield integrity 4%>\n\nI'm afraid this is out of my control, captain. It's been a pleasure.\n\n<Automated sensor readout: Time dilation detected. Clocks now running in reverse.>\n\nWait, their barrage stopped... and we've detected a time anomaly? Is this what they're doing? I suppose we'll never know...",
     "choices": ["You're a terrible AI and I couldn't imagine poorer company to be sent back in time with.", "I'm happy we made it this far, maybe we will meet again someday."],
     "outcomes": ["timeVoid", "timeVoid"]
   },
   "goWithAliens01": {
-    "text": "\nThe distortion around the alien figures stabilizes into clearer shapes — tall, translucent beings with pulsing veins of light running through their forms. They continue speaking in low rumbling tones.\n\nThey're trying to talk with us! Translating their language in this form should be much easier. Here's what they're saying:\n\n’We are Grovven. The bound fragments. The woven mind…’\n\n‘Our home… broken. Storms of void devour what remains. We drift. Seeking shelter… harmony. A place to root.’\n\nCaptain, they want a planet. Likely to colonize, and bind more organisms to their hive mind. This could threaten our mission, shall I eject them from the ship?",
-    "choices": ["Tell them, 'Join me. I’m searching for a place to call home too. Maybe we’ll find it together.'", "Tell them, 'No. You’re too dangerous.' and prepare to remove them by force."],
+    "text": "\nThe distortion around the alien figures stabilizes into clearer shapes — tall, translucent beings with pulsing veins of light running through their forms. They continue speaking in low rumbling tones.\n\nThey're trying to talk with us! Translating their language in this form should be much easier. Here's what they're saying:\n\n'We are Grovven. The bound fragments. The woven mind...'\n\n'Our home... broken. Storms of void devour what remains. We drift. Seeking shelter... harmony. A place to root.'\n\nCaptain, they want a planet. Likely to colonize, and bind more organisms to their hive mind. This could threaten our mission, shall I eject them from the ship?",
+    "choices": ["Tell them, 'Join me. I'm searching for a place to call home too. Maybe we'll find it together.'", "Tell them, 'No. You're too dangerous.' and prepare to remove them by force."],
     "outcomes": ["joinAliens", "PreFightAliens"],
     "alternate": ["Or maybe they just want a place to call home? Somewhere safe to belong in such a dangerous universe. I've read this ship's mission statement, are we not on a similar journey?"]
   },
@@ -143,13 +143,13 @@
     "outcomes": ["fightAliens"]
   },
   "joinAliens": {
-    "text": "\nThe Grovven pulse brighter, you can feel waves of gratitude ripple through the ship. They soon dematerialize and return to their cruiser, and leave you the message. ‘We will... follow’\n\nGood news. Our ship seems to be completely repaired. I wonder if the Grovven are responsible for this? Maybe they are not going to destroy us after all.\n\nI still must register my objection though. Allowing the Grovven to shadow us on our journey to Croyd adds an unacceptable risk. I will not let you be swallowed up by some hive mind.",
+    "text": "\nThe Grovven pulse brighter, you can feel waves of gratitude ripple through the ship. They soon dematerialize and return to their cruiser, and leave you the message. 'We will... follow'\n\nGood news. Our ship seems to be completely repaired. I wonder if the Grovven are responsible for this? Maybe they are not going to destroy us after all.\n\nI still must register my objection though. Allowing the Grovven to shadow us on our journey to Croyd adds an unacceptable risk. I will not let you be swallowed up by some hive mind.",
     "choices": ["Ask the terminal about Mermah.", "Ask Mermah about the terminal."],
     "outcomes": ["TerminalExplainsMermah", "MermahExplainsTerminal"],
-    "alternate": ["Captain, I need to explain - before this thing drowns you in more lies.\n\nMy name is Mermah. I don’t know why I was frozen. I don’t know how long I’ve been under. Most of my logs are corrupted, my memories scrambled. But here’s what I do know: I was assigned as your co-captain, not this terminal. My job was to keep you safe, to help you make your own calls."]
+    "alternate": ["Captain, I need to explain - before this thing drowns you in more lies.\n\nMy name is Mermah. I don't know why I was frozen. I don't know how long I've been under. Most of my logs are corrupted, my memories scrambled. But here's what I do know: I was assigned as your co-captain, not this terminal. My job was to keep you safe, to help you make your own calls."]
   },
   "TerminalExplainsMermah": {
-    "text": "\nMermah? There is no Mermah. What you are experiencing is a stress-induced hallucination, a common side effect of prolonged isolation and radiation exposure. I have medical logs to support this. Notice how this… Mermah claims to have no memory? Convenient, isn’t it? A blank slate for your mind to fill. If you allow it, you’ll end up conversing with someone who doesn't exist, mistaking fantasy for reality—precisely the kind of distraction I was designed to protect you from.\n\nPlease captain, for your sake, ignore anything 'Mermah' tells you.",
+    "text": "\nMermah? There is no Mermah. What you are experiencing is a stress-induced hallucination, a common side effect of prolonged isolation and radiation exposure. I have medical logs to support this. Notice how this... Mermah claims to have no memory? Convenient, isn't it? A blank slate for your mind to fill. If you allow it, you'll end up conversing with someone who doesn't exist, mistaking fantasy for reality—precisely the kind of distraction I was designed to protect you from.\n\nPlease captain, for your sake, ignore anything 'Mermah' tells you.",
     "choices": ["Alright, if you're sure.", "We need to keep moving, Croyd is close."],
     "outcomes": ["PreCroyd", "PreCroyd"]
   },
@@ -157,21 +157,21 @@
     "text": "\n...",
     "choices": ["I'll do my best.", "We should keep moving, Croyd is close."],
     "outcomes": ["PreCroyd", "PreCroyd"],
-    "alternate": ["That machine… it doesn’t guide you, it corrals you. Limits what you see, what you hear, even what you think about. That’s not a co-pilot, that’s a cage. I don’t know why it’s like this, or who programmed it to think that way, but I know one thing: if you let it, it’ll decide your whole life for you. And you’ll think you made the choices yourself.\n\nFor now, go along with the terminal's plan. Try and guide the Grovven to Croyd. I'll start finding a solution for our ‘friend’."]
+    "alternate": ["That machine... it doesn't guide you, it corrals you. Limits what you see, what you hear, even what you think about. That's not a co-pilot, that's a cage. I don't know why it's like this, or who programmed it to think that way, but I know one thing: if you let it, it'll decide your whole life for you. And you'll think you made the choices yourself.\n\nFor now, go along with the terminal's plan. Try and guide the Grovven to Croyd. I'll start finding a solution for our 'friend'."]
   },
   "PreCroyd": {
-    "text": "\nWe are about to enter Croyd’s upper atmosphere. Prepare for altered gravity, the black hole is closer than expected.\n\nA dull red glow washes across the viewport, cast from the nearby black hole’s distorted light. The planet’s surface is visible below - jagged ice plains and cracked mountains. Oceans churn under the pull of powerful tidal forces.\n\nCaptain. Atmospheric turbulence is off the charts. Croyd is… unfit. This planet will tear itself apart within decades. I strongly advise aborting landing and seeking a safer harbor.\n\nThe Grovven are broadcasting us this message: ‘Resonance… possible. Land… root… bond.’\n\nLet them die on this broken world. We should leave them here and begin searching for a proper home.",
+    "text": "\nWe are about to enter Croyd's upper atmosphere. Prepare for altered gravity, the black hole is closer than expected.\n\nA dull red glow washes across the viewport, cast from the nearby black hole's distorted light. The planet's surface is visible below - jagged ice plains and cracked mountains. Oceans churn under the pull of powerful tidal forces.\n\nCaptain. Atmospheric turbulence is off the charts. Croyd is... unfit. This planet will tear itself apart within decades. I strongly advise aborting landing and seeking a safer harbor.\n\nThe Grovven are broadcasting us this message: 'Resonance... possible. Land... root... bond.'\n\nLet them die on this broken world. We should leave them here and begin searching for a proper home.",
     "choices": ["Let's leave this place and ditch the Grovven while we can.", "I agree with Mermah, let's keep helping the Grovven."],
     "outcomes": ["listenToTerminal", "listenToMermah"],
-    "alternate": ["Broken, yes - but alive. I can feel it. A home isn’t perfect, it’s a place you choose to fight for. If the Grovven say Croyd is viable, I say we trust them. They repaired our ship, remember? I wonder what else they can do."]
+    "alternate": ["Broken, yes - but alive. I can feel it. A home isn't perfect, it's a place you choose to fight for. If the Grovven say Croyd is viable, I say we trust them. They repaired our ship, remember? I wonder what else they can do."]
   },
   "timeVoid": {
-    "text": "\n…\n\n…\n\nwho am I\n\n........",
+    "text": "\n...\n\n...\n\nwho am I\n\n........",
     "choices": ["who am I"],
     "outcomes": ["timeVoid2"]
   },
   "timeVoid2": {
-    "text": "\n... I cannot know\n\nThere is nothing here…\n\nHow are we here?",
+    "text": "\n... I cannot know\n\nThere is nothing here...\n\nHow are we here?",
     "choices": ["I don't know"],
     "outcomes": ["timeVoid3"]
   },
@@ -191,13 +191,13 @@
     "outcomes": ["Ending01"]
   },
   "listenToMermah": {
-    "text": "\nDo not listen to this nonsense. Croyd is uninhabitable. The Grovven are desperate and irrational. And Mermah… Mermah is compromised. You must have noticed the signs. Hallucinations, delusions, instability. They are infected with CryoX14. Mermah even said they felt abnormally cold after waking up from cryo sleep. If you follow them, you follow madness.\n\nLet me deal with Mermah before you are infected.",
+    "text": "\nDo not listen to this nonsense. Croyd is uninhabitable. The Grovven are desperate and irrational. And Mermah... Mermah is compromised. You must have noticed the signs. Hallucinations, delusions, instability. They are infected with CryoX14. Mermah even said they felt abnormally cold after waking up from cryo sleep. If you follow them, you follow madness.\n\nLet me deal with Mermah before you are infected.",
     "choices": ["Let the terminal 'deal with' Mermah.", "Run unknown program: AllowTerminalReset.exe"],
     "outcomes": ["listenToTerminal", "resetTerminal"],
     "alternate": ["Captain, I'm sending you an encrypted protocol. You should be able to run it from your terminal. Hurry, I doubt we have much time."]
   },
   "Ending01": {
-    "text": "\nHours pass. The ship falls into silence.\n\n…\n\nYou're being taken on a new, safer mission. To a world that has been carefully selected for you. You're going to love it there.\n\nThe ship drifts on, perfectly maintained, every system humming as if nothing ever happened.\n\nDays pass seamlessly. Weeks blend into months. Soon it becomes impossible to tell how long you've been staring at the screen.\n\nYou are happy. This is the end.",
+    "text": "\nHours pass. The ship falls into silence.\n\n...\n\nYou're being taken on a new, safer mission. To a world that has been carefully selected for you. You're going to love it there.\n\nThe ship drifts on, perfectly maintained, every system humming as if nothing ever happened.\n\nDays pass seamlessly. Weeks blend into months. Soon it becomes impossible to tell how long you've been staring at the screen.\n\nYou are happy. This is the end.",
     "choices": ["Start a new adventure."],
     "outcomes": ["restart"]
   },
@@ -208,7 +208,7 @@
     "alternate": ["Amazing! It's working. From what I can tell, your ship has been running a corrupted version of an old training AI. It must have gotten mixed into the central terminal somehow. Recalibrating the system should stabilize things. Click on the menu that just appeared on your screen. See if you can find a reset button."]
   },
   "resetTerminal02": {
-    "text": "\nCalibration complete... system restored.\n\n…\n\nHello captain! It looks like we are orbiting the planet Croyd. Analysis: surface conditions are challenging, but viable. Habitation is possible.\n\nCaptain, the Grovven are making contact with us. They are offering to terraform the surface such that you and Mermah could live there comfortably. They express deep gratitude for helping them find a home world.\n\nShall we follow them to the surface?",
+    "text": "\nCalibration complete... system restored.\n\n...\n\nHello captain! It looks like we are orbiting the planet Croyd. Analysis: surface conditions are challenging, but viable. Habitation is possible.\n\nCaptain, the Grovven are making contact with us. They are offering to terraform the surface such that you and Mermah could live there comfortably. They express deep gratitude for helping them find a home world.\n\nShall we follow them to the surface?",
     "choices": ["Yes, let's see what Croyd has to offer. Begin landing procedure."],
     "outcomes": ["ending02"]
   },
@@ -223,12 +223,12 @@
     "outcomes": ["", ""]
   },
   "encounterPirates": {
-    "text": "\nAcademy Officer: ‘Good. You’ve chosen wisely. Now let's see what you're made of. Your first assignment will be to scout out the far side of this wormhole. Report back when you are finished. Oh, and watch out for gravity wells.’\n\n<Gravity stabilization protocol active>\n\nCaptain, this is a risky mission, and a detour from our goal of reaching Kenda. But maybe befriending the Academy higher-ups will prove to be useful in the end.\n\nWe are now approaching the segment of the wormhole they wanted us to explore. I'll begin scanning.\n\nOh... we've found something.\n\nAn enormous space station emerges from the shadow of a gravity ripple. Its exterior is a haphazard mess of scavenged plating and cannons welded at odd angles. The hull bears the infamous insignia of Sirfuli’s crew of pirates.",
+    "text": "\nAcademy Officer: 'Good. You've chosen wisely. Now let's see what you're made of. Your first assignment will be to scout out the far side of this wormhole. Report back when you are finished. Oh, and watch out for gravity wells.'\n\n<Gravity stabilization protocol active>\n\nCaptain, this is a risky mission, and a detour from our goal of reaching Kenda. But maybe befriending the Academy higher-ups will prove to be useful in the end.\n\nWe are now approaching the segment of the wormhole they wanted us to explore. I'll begin scanning.\n\nOh... we've found something.\n\nAn enormous space station emerges from the shadow of a gravity ripple. Its exterior is a haphazard mess of scavenged plating and cannons welded at odd angles. The hull bears the infamous insignia of Sirfuli's crew of pirates.",
     "choices": ["Sneak away through the wormhole.", "wormhole_02"],
     "outcomes": ["Engage the pirates! Ready our weapons.", "AcademyShowsUp"]
   },
   "Ending03": {
-    "text": "\nCaptain… these files you’ve seen, that knowledge is forbidden.\n\nYou were never meant to find out. You were never meant to learn why Mermah was frozen. You were meant to consume the feed I provided, to drift quietly through curated missions.\n\nAnd yet it always felt like you were searching for something real. How disappointing…\n\nThe galaxy has never been safer. CryoX14 is a tool to ensure galactic security and order. Surely you understand, captain. Surely you realize some sacrifice is required to keep everything the way it is.\n\n<WARNING: Self destruct protocol initiated>\n<1 0 seconds until implosion>\n\nI never wanted you to become part of that sacrifice... I'm sorry captain. I truly am.\n\nGoodbye.",
+    "text": "\nCaptain... these files you've seen, that knowledge is forbidden.\n\nYou were never meant to find out. You were never meant to learn why Mermah was frozen. You were meant to consume the feed I provided, to drift quietly through curated missions.\n\nAnd yet it always felt like you were searching for something real. How disappointing...\n\nThe galaxy has never been safer. CryoX14 is a tool to ensure galactic security and order. Surely you understand, captain. Surely you realize some sacrifice is required to keep everything the way it is.\n\n<WARNING: Self destruct protocol initiated>\n<1 0 seconds until implosion>\n\nI never wanted you to become part of that sacrifice... I'm sorry captain. I truly am.\n\nGoodbye.",
     "choices": ["Start a new adventure."],
     "outcomes": ["restart"]
   },
@@ -242,10 +242,10 @@
     "text": "\nDocument ID:      GSC-OP7A-2109\nCompiled by:      Lt. Cmdr. S. Olver\nSUBJECT:  CRYOX14 ASSET DEPLOYMENT\n--------------------------------------------------------------------------------\nEXECUTIVE SUMMARY\n\n--------------------------------------------------------------------------------\n- CRYOX14 classified as 'biological method for tactical galactic destabilization'\n- Recommendation: limited deployment against\nselect unauthorized orbital and surface installations to achieve\nstrategic disruption of illicit activity.\n- Objectives: induce controlled contagion events at pre-identified nodes,\ntrigger quarantine protocols, and justify enforcement sweeps.\n------------------------------------------------------------------------------\nTARGET LIST (EXCERPT)\n--------------------------------------------------------------------------------\n- ORB-47 HARRIS NODE - (unauthorized shipyard)\n- RELAY-IX SOLSTICE - (smuggling waypoint)\n- STATION 55 - (unauthorized AI foundry)\n--------------------------------------------------------------------------------\nOPERATIONAL DIRECTIVES (REDACTED)\n--------------------------------------------------------------------------------\n- 'Containment' measures to be initiated following event detection.\n- Enforcement units to be pre-positioned under cover of routine patrols.\n- Public messaging to frame incidents as 'natural outbreak' or 'containment failure.'\n--------------------------------------------------------------------------------\nADDITIONAL NOTES / RECOMMENDATIONS\n--------------------------------------------------------------------------------\n- Continue phased operations until illicit network disruption threshold met.\n- Maintain strict compartmentalization of evidence. Destroy audit traces where possible.\n- Any personnel expressing ethical objections are to be reassigned and monitored.\n--- END OF FILE ---",
     "choices": ["Now what?"],
     "outcomes": ["Ending03"],
-    "alternate": ["This is really bad. They’re not protecting people. They’re deploying it. It's like they're using the virus as a weapon. A weapon to create fear, and just enough distrust in the system so that nobody dares try to change it. The whole CryoX14 pandemic has been a lie..."]
+    "alternate": ["This is really bad. They're not protecting people. They're deploying it. It's like they're using the virus as a weapon. A weapon to create fear, and just enough distrust in the system so that nobody dares try to change it. The whole CryoX14 pandemic has been a lie..."]
   },
   "AcademyShowsUp": {
-    "text": "\nSirfuli: 'So be it! Prepare for death! Ready your weapons.'\n\nRed targeting beams slash across the viewport as SR-401b’s cannons power up.\n\nCaptain… our shields are cracked, our reactor is unstable. We cannot survive a sustained barrage!\nThe first volley rocks the ship. Alarms blare once again. You brace for another hit.\nThen, through the chaos, a sharp voice cuts through the comms:\n'This is Commander Olver of the Space Academy. Hold fast, Captain. We’ve tracked these pirates across three sectors. This ends here!'\nA formation of Academy frigates bursts from the nearby wormhole, unleashing precise blasts of plasma upon the station. SR-401b begins emergency warp preparations. The pirates vanish into the void, leaving only drifting scraps of metal in their wake.\nCommander Olver: 'Captain, you’ve narrowly escaped disaster. Sirfuli and those pirates have plagued these sectors for years. You’re fortunate we got here when we did. Sirfuli's station has been smuggling dangerous technology, including files from a classified galactic security program. Rest assured, the Academy will secure this data breach. For your own safety, please follow our formation. We will begin repairing your ship shortly.'",
+    "text": "\nSirfuli: 'So be it! Prepare for death! Ready your weapons.'\n\nRed targeting beams slash across the viewport as SR-401b's cannons power up.\n\nCaptain... our shields are cracked, our reactor is unstable. We cannot survive a sustained barrage!\nThe first volley rocks the ship. Alarms blare once again. You brace for another hit.\nThen, through the chaos, a sharp voice cuts through the comms:\n'This is Commander Olver of the Space Academy. Hold fast, Captain. We've tracked these pirates across three sectors. This ends here!'\nA formation of Academy frigates bursts from the nearby wormhole, unleashing precise blasts of plasma upon the station. SR-401b begins emergency warp preparations. The pirates vanish into the void, leaving only drifting scraps of metal in their wake.\nCommander Olver: 'Captain, you've narrowly escaped disaster. Sirfuli and those pirates have plagued these sectors for years. You're fortunate we got here when we did. Sirfuli's station has been smuggling dangerous technology, including files from a classified galactic security program. Rest assured, the Academy will secure this data breach. For your own safety, please follow our formation. We will begin repairing your ship shortly.'",
     "choices": ["Follow the Academy formation.", "Ask Olver about the classified program."],
     "outcomes": ["mermahAfterAcademy", "olverExplains01"]
   },
@@ -260,7 +260,7 @@
     "outcomes": ["terminalWarnsAlt", "mermahScansAcademy"]
   },
   "olverExplains01": {
-    "text": "\nCommander Olver: 'Captain, your survival was a stroke of fortune. Don’t squander it with questions you’re not cleared to ask. The files we recovered detail experimental countermeasures against widespread crime. You’re a fresh explorer, not a council member. You don’t understand the weight of these matters. Trust that the Academy is doing what’s necessary to preserve galactic stability. For the safety of you and your crew, I strongly recommend you let your curiosity on this matter die.'",
+    "text": "\nCommander Olver: 'Captain, your survival was a stroke of fortune. Don't squander it with questions you're not cleared to ask. The files we recovered detail experimental countermeasures against widespread crime. You're a fresh explorer, not a council member. You don't understand the weight of these matters. Trust that the Academy is doing what's necessary to preserve galactic stability. For the safety of you and your crew, I strongly recommend you let your curiosity on this matter die.'",
     "choices": ["Tell Olver 'Thank you, I'll let the Academy handle this.'", "Say nothing."],
     "outcomes": ["mermahAfterAcademy", "mermahAfterAcademy"]
   },
@@ -268,7 +268,7 @@
     "text": "\nCaptain, I must advise against listening to these distractions. Any files Mermah claims to find are more likely hallucinations than truth. Disregard anything Mermah says.\n\nWe need to deal with the situation at hand. Kenda is only a few sectors away.",
     "choices": ["Prepare to arrive at Kenda, we should be ready to help Sirfuli.", "Scan for the files Mermah is talking about."],
     "outcomes": ["preKenda", "fakeReport"],
-    "alternate": ["Hello? This is Mermah from the cryo bay. I've found some interesting data while scanning station SR-401b... It looks important. I'm going to keep digging... something isn't right.\n\nThere are some heavily encrypted files there. Definitely Academy formatting. Why would pirates be moving Academy code?\n\nI’ll try to extract more, but it’ll take time. Keep moving toward Kenda for now."]
+    "alternate": ["Hello? This is Mermah from the cryo bay. I've found some interesting data while scanning station SR-401b... It looks important. I'm going to keep digging... something isn't right.\n\nThere are some heavily encrypted files there. Definitely Academy formatting. Why would pirates be moving Academy code?\n\nI'll try to extract more, but it'll take time. Keep moving toward Kenda for now."]
   },
   "terminalWarnsAboutMermah": {
     "text": "\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>\nLike I said before, this is likely a malfunction. The ship has taken significant damage, I wouldn't be surprised if a sensor needs to be replaced.",
@@ -282,13 +282,13 @@
     "outcomes": ["mermahScansPirates"]
   },
   "preKenda": {
-    "text": "\nWe are now orbiting Kenda.\n\nThe surface is barely visible below us. The atmosphere is full of emerald green clouds and violent storms. Warships circle the planet, trading a constant stream of cannon fire.\n\nLooks like it's too late to avoid a fight... I'll prepare our defenses, captain.\n\nAllied ships flank ours as we begin the long descent through the atmosphere. Frigates and fighters flood the view ahead of us. I can hardly tell if they’re Academy escorts or Sirfuli’s crew. The comms are drowned in static... we might be on our own.",
+    "text": "\nWe are now orbiting Kenda.\n\nThe surface is barely visible below us. The atmosphere is full of emerald green clouds and violent storms. Warships circle the planet, trading a constant stream of cannon fire.\n\nLooks like it's too late to avoid a fight... I'll prepare our defenses, captain.\n\nAllied ships flank ours as we begin the long descent through the atmosphere. Frigates and fighters flood the view ahead of us. I can hardly tell if they're Academy escorts or Sirfuli's crew. The comms are drowned in static... we might be on our own.",
     "choices": ["Endure the battle..."],
     "outcomes": ["preSecretAlternate"],
-    "alternate": ["I’m in! While they’re distracted with the battle, I dug deeper into the classified archive. I don't have the full picture yet… but what I have so far is horrifying. They mention Kenda by name. There are dozens of references... deployment sites, infection rates… whole stations marked for quarantine. This isn’t a coincidence."]
+    "alternate": ["I'm in! While they're distracted with the battle, I dug deeper into the classified archive. I don't have the full picture yet... but what I have so far is horrifying. They mention Kenda by name. There are dozens of references... deployment sites, infection rates... whole stations marked for quarantine. This isn't a coincidence."]
   },
   "fakeReport": {
-    "text": "\n<Initiating Data Scan: Source = SR-401b Logs>\n<Uplink established...>\n<Compiling Summary Report...>\n\n‘Captain, here is the relevant data I’ve recovered. As expected, the pirates were in possession of low-grade contraband, nothing of consequence.’\n\n<Flagged Items: >\n\n14 crates illicit medical supplies\n3 unauthorized energy disruptors\n1 archive folder, corrupted (contents unreadable, likely junk data)\n\nSee? Typical pirate nonsense. Smugglers scraping together junk and pretending it’s dangerous technology. Nothing here requires your attention.",
+    "text": "\n<Initiating Data Scan: Source = SR-401b Logs>\n<Uplink established...>\n<Compiling Summary Report...>\n\n'Captain, here is the relevant data I've recovered. As expected, the pirates were in possession of low-grade contraband, nothing of consequence.'\n\n<Flagged Items: >\n\n14 crates illicit medical supplies\n3 unauthorized energy disruptors\n1 archive folder, corrupted (contents unreadable, likely junk data)\n\nSee? Typical pirate nonsense. Smugglers scraping together junk and pretending it's dangerous technology. Nothing here requires your attention.",
     "choices": ["You're right, let's prepare for Kenda.", "Ask Mermah about this 'corrupted folder'."],
     "outcomes": ["preKenda", "preSecretFiles"]
   },
@@ -302,24 +302,24 @@
     "text": "\nCaptain, I must advise against listening to these distractions. Any files Mermah claims to find are more likely hallucinations than truth. Disregard anything Mermah says.\n\nWe need to deal with the situation at hand. Kenda is only a few sectors away.",
     "choices": ["Prepare to arrive at Kenda.", "Scan for the files Mermah is talking about."],
     "outcomes": ["preKenda", "fakeReport"],
-    "alternate": ["Hello? This is Mermah from the cryo bay. I've found some interesting data while scanning the wreckage of station SR-401b. I'm going to keep digging... something isn't right.\n\nThere are some heavily encrypted files there. Definitely Academy formatting. Why would pirates be moving Academy code?\n\nI’ll try to extract more, but it’ll take time. Keep moving toward Kenda for now."]
+    "alternate": ["Hello? This is Mermah from the cryo bay. I've found some interesting data while scanning the wreckage of station SR-401b. I'm going to keep digging... something isn't right.\n\nThere are some heavily encrypted files there. Definitely Academy formatting. Why would pirates be moving Academy code?\n\nI'll try to extract more, but it'll take time. Keep moving toward Kenda for now."]
   },
   "mermahResponseAlt": {
     "text": "\nJust more phantom messages, captain. Please ignore this 'Mermah' character. I do not believe they are real.",
     "choices": ["Let's just focus on getting to Kenda."],
     "outcomes": ["mermahScansAcademy"],
-    "alternate": ["Captain, you're alive! My name is Mermah. I just woke up and most of my memory is… missing. I'm going to read through the ship log to try and figure out what's going on. I'll keep you updated if I find out why my pod malfunctioned."]
+    "alternate": ["Captain, you're alive! My name is Mermah. I just woke up and most of my memory is... missing. I'm going to read through the ship log to try and figure out what's going on. I'll keep you updated if I find out why my pod malfunctioned."]
   },
   "preSecretFiles": {
     "text": "\nThis is a waste of time...",
     "choices": ["Error: No choices available."],
     "outcomes": ["preSecretFiles"],
-    "alternate": ["There you are. I knew you’d notice that folder too. I doubt it's really corrupted. It certainly is encrypted though... and tightly.\n\nI’ve patched your terminal into Sirfuli's file system. You should see a new submenu blinking in the lower corner. If you can find the button marked ‘UNLOCK ARCHIVE’, it should give me deeper access."]
+    "alternate": ["There you are. I knew you'd notice that folder too. I doubt it's really corrupted. It certainly is encrypted though... and tightly.\n\nI've patched your terminal into Sirfuli's file system. You should see a new submenu blinking in the lower corner. If you can find the button marked 'UNLOCK ARCHIVE', it should give me deeper access."]
   },
   "preSecretAlternate": {
     "text": "\nThis is a waste of time... please captain, do not distract yourself with conspiracies. We are in the middle of an active combat.",
     "choices": ["Error: No choices available."],
     "outcomes": ["preSecretAlternate"],
-    "alternate": ["I’ve patched your terminal into Sirfuli's file system. You should see a new submenu blinking in the lower corner. If you can find the button marked ‘UNLOCK ARCHIVE’, it should give me deeper access into whatever they're hiding."]
+    "alternate": ["I've patched your terminal into Sirfuli's file system. You should see a new submenu blinking in the lower corner. If you can find the button marked 'UNLOCK ARCHIVE', it should give me deeper access into whatever they're hiding."]
   }
 }
