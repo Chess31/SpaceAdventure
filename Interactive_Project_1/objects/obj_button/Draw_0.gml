@@ -1,6 +1,6 @@
 //default
-draw_self();
-draw_set_color(c_yellow);
+draw_sprite_ext(spr_button, hovered, x, y, 1, 1, 0, color_main, 1);
+draw_set_color(color_alt);
 draw_set_valign(fa_middle);
 draw_set_halign(fa_center);
 draw_text(x + 110, y - 32, "System Control");
@@ -9,7 +9,7 @@ draw_text(x + 110, y - 32, "System Control");
 if (page = 1) {
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_left);
-	draw_sprite(spr_pages, 0, x + sprite_width, y);
+	draw_sprite_ext(spr_pages, 0, x + sprite_width, y, 1, 1, 0, color_main, 1);
 	
 	// Draw secondary buttons with hover effects
 	draw_secondary_buttons();
@@ -19,7 +19,7 @@ if (page = 1) {
 if (page = 2) {
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_left);
-	draw_sprite(spr_pages, 1, x + sprite_width, y);
+	draw_sprite_ext(spr_pages, 0, x + sprite_width, y, 1, 1, 0, color_main, 1);
 	
 	// Draw secondary buttons with hover effects
 	draw_secondary_buttons();
@@ -36,10 +36,10 @@ function draw_secondary_buttons() {
 		
 		// Draw button background rectangle
 		if (is_hovered) {
-			draw_set_color(c_yellow);
-			draw_rectangle_color(btn.x - 5, btn.y - 5, btn.x + string_width(btn.text) + 5, btn.y + string_height(btn.text) + 5, c_green, c_green, c_green, c_green, true);
+			draw_set_color(color_alt);
+			draw_rectangle_color(btn.x - 5, btn.y - 5, btn.x + string_width(btn.text) + 5, btn.y + string_height(btn.text) + 5, color_main, color_main, color_main, color_main, true);
 		} else {
-			draw_set_color(c_green);
+			draw_set_color(color_main);
 		}
 		
 		// Draw button text

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"script_grid_shader_manager",
+  "%Name":"script_menu_functions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"script_grid_shader_manager",
+  "name":"script_menu_functions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

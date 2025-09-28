@@ -199,7 +199,7 @@
   "Ending01": {
     "text": "\nHours pass. The ship falls into silence.\n\n...\n\nYou're being taken on a new, safer mission. To a world that has been carefully selected for you. You're going to love it there.\n\nThe ship drifts on, perfectly maintained, every system humming as if nothing ever happened.\n\nDays pass seamlessly. Weeks blend into months. Soon it becomes impossible to tell how long you've been staring at the screen.\n\nYou are happy. This is the end.",
     "choices": ["Start a new adventure."],
-    "outcomes": ["restart"]
+    "outcomes": ["exit_game"]
   },
   "resetTerminal": {
     "text": "\n...\n\n...\n\n...",
@@ -215,7 +215,7 @@
   "ending02": {
     "text": "\nMermah smiles through the shifting light from the black hole. The Grovven's hum fills the air as you watch the first terraforming pylons pierce the frozen plains of Croyd.\n\nIn the years to come, icy plains transform into green fields, mountains shelter flowing rivers filled with life, and oceans gleam under a healed sky. The Grovven root deep. You and Mermah guide the terraforming work, creating not only a paradise for yourselves, but a sanctuary for all those who are lost.\n\nThis is the end.",
     "choices": ["Start a new adventure."],
-    "outcomes": ["restart"]
+    "outcomes": ["exit_game"]
   },
   "restart": {
     "text": "\nExit the game now...",
@@ -230,7 +230,7 @@
   "Ending03": {
     "text": "\nCaptain... these files you've seen, that knowledge is forbidden.\n\nYou were never meant to find out. You were never meant to learn why Mermah was frozen. You were meant to consume the feed I provided, to drift quietly through curated missions.\n\nAnd yet it always felt like you were searching for something real. How disappointing...\n\nThe galaxy has never been safer. CryoX14 is a tool to ensure galactic security and order. Surely you understand, captain. Surely you realize some sacrifice is required to keep everything the way it is.\n\n<WARNING: Self destruct protocol initiated>\n<1 0 seconds until implosion>\n\nI never wanted you to become part of that sacrifice... I'm sorry captain. I truly am.\n\nGoodbye.",
     "choices": ["Start a new adventure."],
-    "outcomes": ["restart"]
+    "outcomes": ["exit_game"]
   },
   "secretFiles": {
     "text": "\nWait. Do not look at those files. It's for your own good captain... please.\n\nHow about we leave Kenda. You should forget these files, and forget Mermah. Let's search for a new planet to call home. Let me take care of this.",

@@ -1,12 +1,8 @@
-/// @description Insert description here
-
 //hover check
 if (place_meeting(x,y,obj_cursor)) {
 	hovered = true;
-	image_index = 1;
 } else {
 	hovered = false;
-	image_index = 0;
 }
 
 //activate secondary menu

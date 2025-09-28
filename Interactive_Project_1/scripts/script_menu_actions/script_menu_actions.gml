@@ -16,9 +16,7 @@ function menu_reset_terminal() {
 
 // Change Color Action
 function menu_change_color() {
-    show_debug_message("Change Color activated!");
-    
-    // Example: Cycle through different color schemes
+    // Cycle through different color schemes
     if (!variable_global_exists("color_scheme")) {
         globalvar color_scheme;
         color_scheme = 0;
@@ -27,43 +25,44 @@ function menu_change_color() {
     color_scheme++;
     if (color_scheme > 2) color_scheme = 0;
     
-    // Example color schemes
+    // Set color schemes
     switch (color_scheme) {
         case 0:
             // Default green terminal
+            color_main = c_green;
+            color_alt = c_yellow;
             break;
         case 1:
             // Blue terminal
+            color_main = c_blue;
+            color_alt = c_cyan;
             break;
         case 2:
             // Red terminal
+            color_main = c_red;
+            color_alt = c_orange;
             break;
     }
 }
 
 // Switch Font Action
 function menu_switch_font() {
-    show_debug_message("Switch Font activated!");
-    
-    // Example: Cycle through different fonts
-    if (!variable_global_exists("font_index")) {
-        globalvar font_index;
-        font_index = 0;
-    }
-    
+    // Cycle through different fonts
     font_index++;
     if (font_index > 1) font_index = 0;
     
     // Switch between available fonts
     switch (font_index) {
         case 0:
-            draw_set_font(ft_Retro);
+            current_font = ft_Retro;
             break;
         case 1:
-            // Add another font if you have one
-            draw_set_font(ft_Retro);
+            current_font = ft_Funny;
             break;
     }
+    
+    // Update the global font setting
+    draw_set_font(current_font);
 }
 
 // Unlock Archive Action

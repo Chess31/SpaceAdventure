@@ -220,8 +220,8 @@ function wrap_text(text, max_width) {
 function text_adventure_draw() {
     
     // Set up drawing
-    draw_set_font(ft_Retro);
-    draw_set_color(c_green);
+    draw_set_font(current_font);
+    draw_set_color(color_main);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     
@@ -232,11 +232,11 @@ function text_adventure_draw() {
     var text_area_height = room_height - 100; // Half screen height minus margins
     
     // Draw border around story text area
-    draw_set_color(c_green);
+    draw_set_color(color_main);
     draw_rectangle(text_area_x, text_area_y, text_area_x * 2 + text_area_width, text_area_y + text_area_height, true);
     
     // Draw title for story text area
-    draw_set_color(c_yellow);
+    draw_set_color(color_alt);
     draw_text(text_area_x + 20, text_area_y + 5, "SHIP LOG:");
     
     // Draw the current text (typewriter effect) in upper left
@@ -247,7 +247,7 @@ function text_adventure_draw() {
     var lines = string_split(wrapped_text, "\n");
     
     var y_pos = text_area_y + 35; // Add padding inside border + space for title
-	draw_set_color(c_green);
+	draw_set_color(color_main);
     for (var i = 0; i < array_length(lines); i++) {
         draw_text(text_area_x + 20, y_pos, lines[i]); // Add padding inside border
         y_pos += 30;
@@ -260,11 +260,11 @@ function text_adventure_draw() {
     var choice_area_height = room_height / 2 - 100;
     
     // Draw border around choices area
-    draw_set_color(c_green);
+    draw_set_color(color_main);
     draw_rectangle(choice_area_x, choice_area_y, choice_area_x + choice_area_width, choice_area_y + choice_area_height, true);
     
     // Draw title for choices area
-    draw_set_color(c_yellow);
+    draw_set_color(color_alt);
     draw_text(choice_area_x + 20, choice_area_y + 5, "COMMAND LINE:");
     
     // Draw crew messages area only if enabled
@@ -276,11 +276,11 @@ function text_adventure_draw() {
         var crew_area_height = room_height / 2 - 50;
         
         // Draw border around crew messages area
-        draw_set_color(c_green);
+        draw_set_color(color_main);
         draw_rectangle(crew_area_x, crew_area_y, crew_area_x + crew_area_width, crew_area_y + crew_area_height, true);
         
         // Draw title for crew messages area
-        draw_set_color(c_yellow);
+        draw_set_color(color_alt);
         draw_text(crew_area_x + 20, crew_area_y + 5, "CREW MESSAGES:");
         
         // Draw crew message if available
@@ -293,7 +293,7 @@ function text_adventure_draw() {
             var crew_lines = string_split(wrapped_crew_message, "\n");
             
             var crew_y_pos = crew_area_y + 35; // Add padding inside border + space for title
-            draw_set_color(c_green);
+            draw_set_color(color_main);
             for (var i = 0; i < array_length(crew_lines); i++) {
                 draw_text(crew_area_x + 20, crew_y_pos, crew_lines[i]); // Add padding inside border
                 crew_y_pos += 30;
@@ -322,15 +322,18 @@ function text_adventure_draw() {
         // Draw each choice with word wrapping similar to the ship log
         for (var i = 0; i < array_length(choices); i++) {
             var choice_prefix = string(i + 1) + ". ";
+            if (i == current_choice) {
+                choice_prefix = "> " + choice_prefix;
+            }
             var choice_text_full = choice_prefix + string(choices[i]);
 
             var wrapped_choice = wrap_text(choice_text_full, choice_inner_width);
             var wrapped_lines = string_split(wrapped_choice, "\n");
 
             if (i == current_choice) {
-                draw_set_color(c_yellow); // Highlight selected choice block
+                draw_set_color(color_alt); // Highlight selected choice block
             } else {
-                draw_set_color(c_green);
+                draw_set_color(color_main);
             }
 
             for (var j = 0; j < array_length(wrapped_lines); j++) {
@@ -344,7 +347,7 @@ function text_adventure_draw() {
     }
     
     // Draw cursor if typing
-	draw_set_color(c_green);
+	draw_set_color(color_main);
     if (text_position < string_length(current_text)) {
         var last_line = lines[array_length(lines) - 1];
         draw_text(text_area_x + 20 + string_width(last_line), y_pos - 25, "_");

@@ -1,5 +1,3 @@
-/// @description Insert description here
-
 type = 1;
 hovered = false;
 page = -1;
@@ -104,10 +102,10 @@ function execute_button_action(action) {
 			instance_destroy();
 			break;
 		case "change_color":
-			//menu_change_color();
+			menu_change_color();
 			break;
 		case "switch_font":
-			//menu_switch_font();
+			menu_switch_font();
 			break;
 		case "unlock_archive":
 			//go to "secretFiles" scene

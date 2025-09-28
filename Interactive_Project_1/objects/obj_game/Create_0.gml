@@ -9,8 +9,22 @@ color_bleeding = 0.20;     // Color bleeding: 0.0 = none, 1.0 = strong
 //secret ending variables
 button_exists = false;
 
+// Global color system
+globalvar color_main;
+globalvar color_alt;
+globalvar color_scheme;
+color_scheme = 0;
+color_main = c_green;
+color_alt = c_yellow;
+
+// Global font system
+globalvar current_font;
+current_font = ft_Retro;
+
 //set font for text
-draw_set_font(ft_Retro);
+draw_set_font(current_font);
+globalvar font_index;
+font_index = 0;
 
 //do not auto draw application surface
 application_surface_draw_enable(false);
