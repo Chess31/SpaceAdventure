@@ -7,6 +7,9 @@ globalvar show_choices;
 globalvar current_scene;
 globalvar story_scenes;
 globalvar current_crew_message;
+globalvar crew_text_timer;
+globalvar crew_text_position;
+globalvar show_crew_messages;
 
 // Initialize
 function text_adventure_init() {
@@ -18,6 +21,9 @@ function text_adventure_init() {
     show_choices = false;
     current_text = "";
     current_crew_message = "";
+    crew_text_timer = 0;
+    crew_text_position = 0;
+    show_crew_messages = false;
     
     // Load story scenes
     load_story_scenes();
@@ -54,7 +60,7 @@ function load_story_scenes() {
     }
     
     // No fallback - let the game fail to help with debugging
-    show_debug_message("FATAL: Cannot load story data. Check datafiles/story.json file!");
+    show_debug_message("Cannot load story data. Check datafiles/story.json file!");
 }
 
 // Start a new scene
@@ -67,7 +73,13 @@ function text_adventure_start_scene(scene_id) {
         current_text = variable_struct_get(scene, "text");
         // Check for alternate field (crew message)
         if (variable_struct_exists(scene, "alternate")) {
-            current_crew_message = variable_struct_get(scene, "alternate");
+            var alternate_data = variable_struct_get(scene, "alternate");
+            // Handle array format - take first element if it's an array
+            if (is_array(alternate_data) && array_length(alternate_data) > 0) {
+                current_crew_message = alternate_data[0];
+            } else {
+                current_crew_message = alternate_data;
+            }
         } else {
             current_crew_message = "";
         }
@@ -75,7 +87,13 @@ function text_adventure_start_scene(scene_id) {
         current_text = scene[? "text"];
         // Check for alternate field (crew message)
         if (ds_map_exists(scene, "alternate")) {
-            current_crew_message = scene[? "alternate"];
+            var alternate_data = scene[? "alternate"];
+            // Handle array format - take first element if it's an array
+            if (is_array(alternate_data) && array_length(alternate_data) > 0) {
+                current_crew_message = alternate_data[0];
+            } else {
+                current_crew_message = alternate_data;
+            }
         } else {
             current_crew_message = "";
         }
@@ -84,16 +102,33 @@ function text_adventure_start_scene(scene_id) {
     text_position = 0;
     show_choices = false;
     current_choice = 0;
+    crew_text_position = 0;
+    
+    // Hide crew messages when there's no crew message
+    if (current_crew_message == "") {
+        show_crew_messages = false;
+        layer_set_visible("Assets_01", true);
+    } else {
+        show_crew_messages = true;
+        layer_set_visible("Assets_01", false);
+    }
 }
 
 // update function
 function text_adventure_update() {
     text_timer++;
+    crew_text_timer++;
     
-    // typewriter findme
+    // typewriter effect for main text
     if (text_timer >= 1 && text_position < string_length(current_text)) {
         text_position++;
         text_timer = 0;
+    }
+    
+    // typewriter effect for crew messages
+    if (crew_text_timer >= 1 && crew_text_position < string_length(current_crew_message)) {
+        crew_text_position++;
+        crew_text_timer = 0;
     }
     
     // Show choices after text is complete
@@ -232,31 +267,37 @@ function text_adventure_draw() {
     draw_set_color(c_yellow);
     draw_text(choice_area_x + 20, choice_area_y + 5, "COMMAND LINE:");
     
-    // Define crew messages area (upper right section)
-    var crew_area_x = room_width / 2 + 250;
-    var crew_area_y = 50;
-    var crew_area_width = room_width / 2 - 300;
-    var crew_area_height = room_height / 2 - 50;
-    
-    // Draw border around crew messages area
-    draw_set_color(c_green);
-    draw_rectangle(crew_area_x, crew_area_y, crew_area_x + crew_area_width, crew_area_y + crew_area_height, true);
-    
-    // Draw title for crew messages area
-    draw_set_color(c_yellow);
-    draw_text(crew_area_x + 20, crew_area_y + 5, "CREW MESSAGES:");
-    
-    // Draw crew message if available
-    if (current_crew_message != "") {
-        var crew_inner_width = crew_area_width - 40; // account for left/right padding
-        var wrapped_crew_message = wrap_text(current_crew_message, crew_inner_width);
-        var crew_lines = string_split(wrapped_crew_message, "\n");
+    // Draw crew messages area only if enabled
+    if (show_crew_messages) {
+        // Define crew messages area (upper right section)
+        var crew_area_x = room_width / 2 + 250;
+        var crew_area_y = 50;
+        var crew_area_width = room_width / 2 - 300;
+        var crew_area_height = room_height / 2 - 50;
         
-        var crew_y_pos = crew_area_y + 35; // Add padding inside border + space for title
+        // Draw border around crew messages area
         draw_set_color(c_green);
-        for (var i = 0; i < array_length(crew_lines); i++) {
-            draw_text(crew_area_x + 20, crew_y_pos, crew_lines[i]); // Add padding inside border
-            crew_y_pos += 30;
+        draw_rectangle(crew_area_x, crew_area_y, crew_area_x + crew_area_width, crew_area_y + crew_area_height, true);
+        
+        // Draw title for crew messages area
+        draw_set_color(c_yellow);
+        draw_text(crew_area_x + 20, crew_area_y + 5, "CREW MESSAGES:");
+        
+        // Draw crew message if available
+        if (current_crew_message != "") {
+            var crew_inner_width = crew_area_width - 40; // account for left/right padding
+            
+            // Use typewriter effect for crew messages
+            var display_crew_text = string_copy(current_crew_message, 1, crew_text_position);
+            var wrapped_crew_message = wrap_text(display_crew_text, crew_inner_width);
+            var crew_lines = string_split(wrapped_crew_message, "\n");
+            
+            var crew_y_pos = crew_area_y + 35; // Add padding inside border + space for title
+            draw_set_color(c_green);
+            for (var i = 0; i < array_length(crew_lines); i++) {
+                draw_text(crew_area_x + 20, crew_y_pos, crew_lines[i]); // Add padding inside border
+                crew_y_pos += 30;
+            }
         }
     }
     

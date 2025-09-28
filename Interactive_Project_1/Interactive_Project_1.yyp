@@ -39,6 +39,7 @@
   "name":"Interactive_Project_1",
   "resources":[
     {"id":{"name":"ft_Retro","path":"fonts/ft_Retro/ft_Retro.yy",},},
+    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},},
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"rm_home","path":"rooms/rm_home/rm_home.yy",},},
