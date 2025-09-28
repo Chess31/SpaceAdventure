@@ -13,9 +13,9 @@ text_adventure_handle_input();
 
 //Secret Endings
 
-if (current_scene == "start" or current_scene == "preSecretAlternate") and (button_exists == false){
+if ((current_scene == "start" or current_scene == "preSecretAlternate") and (button_exists == false)){
     // Show file system option
-	button_exists = false;
+	button_exists = true;
 	var _button = instance_create_layer(50,room_height-50,"Instances",obj_button);
 	_button.type = 2;
 }
