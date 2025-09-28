@@ -6,6 +6,9 @@ scanline_intensity = 0.5;  // Scanline darkness: 0.0 = none, 1.0 = very dark
 vignette_strength = 0.3;   // Vignette darkness: 0.0 = none, 1.0 = very dark
 color_bleeding = 0.20;     // Color bleeding: 0.0 = none, 1.0 = strong
 
+//secret ending variables
+button_exists = false;
+
 //set font for text
 draw_set_font(ft_Retro);
 

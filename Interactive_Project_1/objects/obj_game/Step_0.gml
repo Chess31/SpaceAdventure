@@ -11,10 +11,11 @@ text_adventure_update();
 // Handle input for the text adventure
 text_adventure_handle_input();
 
-//Custom Functionality
+//Secret Endings
 
-// Check which scene is currently active
-if (current_scene == "message_01") {
-    // Do something specific for this scene
-	//game_end();
+if (current_scene == "start" or current_scene == "preSecretAlternate") and (button_exists == false){
+    // Show file system option
+	button_exists = false;
+	var _button = instance_create_layer(50,room_height-50,"Instances",obj_button);
+	_button.type = 2;
 }

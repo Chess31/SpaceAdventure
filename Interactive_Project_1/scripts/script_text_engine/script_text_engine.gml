@@ -107,10 +107,10 @@ function text_adventure_start_scene(scene_id) {
     // Hide crew messages when there's no crew message
     if (current_crew_message == "") {
         show_crew_messages = false;
-        layer_set_visible("Assets_01", true);
+        layer_set_visible("Assets_1", true);
     } else {
         show_crew_messages = true;
-        layer_set_visible("Assets_01", false);
+        layer_set_visible("Assets_1", false);
     }
 }
 

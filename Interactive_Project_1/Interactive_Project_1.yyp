@@ -55,6 +55,7 @@
     {"id":{"name":"spr_display_02","path":"sprites/spr_display_02/spr_display_02.yy",},},
     {"id":{"name":"spr_display_3","path":"sprites/spr_display_3/spr_display_3.yy",},},
     {"id":{"name":"spr_display_4","path":"sprites/spr_display_4/spr_display_4.yy",},},
+    {"id":{"name":"spr_pages","path":"sprites/spr_pages/spr_pages.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
