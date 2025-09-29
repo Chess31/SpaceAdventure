@@ -198,8 +198,8 @@
   },
   "Ending01": {
     "text": "\nHours pass. The ship falls into silence.\n\n...\n\nYou're being taken on a new, safer mission. To a world that has been carefully selected for you. You're going to love it there.\n\nThe ship drifts on, perfectly maintained, every system humming as if nothing ever happened.\n\nDays pass seamlessly. Weeks blend into months. Soon it becomes impossible to tell how long you've been staring at the screen.\n\nYou are happy. This is the end.",
-    "choices": ["Start a new adventure."],
-    "outcomes": ["exit_game"]
+    "choices": ["The end"],
+    "outcomes": ["bad_ending"]
   },
   "resetTerminal": {
     "text": "\n...\n\n...\n\n...",
@@ -214,8 +214,8 @@
   },
   "ending02": {
     "text": "\nMermah smiles through the shifting light from the black hole. The Grovven's hum fills the air as you watch the first terraforming pylons pierce the frozen plains of Croyd.\n\nIn the years to come, icy plains transform into green fields, mountains shelter flowing rivers filled with life, and oceans gleam under a healed sky. The Grovven root deep. You and Mermah guide the terraforming work, creating not only a paradise for yourselves, but a sanctuary for all those who are lost.\n\nThis is the end.",
-    "choices": ["Start a new adventure."],
-    "outcomes": ["exit_game"]
+    "choices": ["The end"],
+    "outcomes": ["grovven_ending"]
   },
   "restart": {
     "text": "\nExit the game now...",
@@ -228,9 +228,9 @@
     "outcomes": ["AcademyShowsUp", "wormhole_02"]
   },
   "Ending03": {
-    "text": "\nCaptain... these files you've seen, that knowledge is forbidden.\n\nYou were never meant to find out. You were never meant to learn why Mermah was frozen. You were meant to consume the feed I provided, to drift quietly through curated missions.\n\nAnd yet it always felt like you were searching for something real. How disappointing...\n\nThe galaxy has never been safer. CryoX14 is a tool to ensure galactic security and order. Surely you understand, captain. Surely you realize some sacrifice is required to keep everything the way it is.\n\n<WARNING: Self destruct protocol initiated>\n<1 0 seconds until implosion>\n\nI never wanted you to become part of that sacrifice... I'm sorry captain. I truly am.\n\nGoodbye.",
-    "choices": ["Start a new adventure."],
-    "outcomes": ["exit_game"]
+    "text": "\nCaptain... these files you've seen, that knowledge is forbidden.\n\nYou were never meant to find out. You were never meant to learn why Mermah was frozen. You were meant to consume the feed I provided, to drift quietly through curated missions.\n\nAnd yet it always felt like you were searching for something real. How disappointing...\n\nThe galaxy has never been safer. CryoX14 is a tool to ensure galactic security and order. Surely you understand, captain. Surely you realize some sacrifice is required to keep everything the way it is.\n\n<WARNING: Self destruct protocol initiated>\n<10 seconds until explosion>\n\nI never wanted you to become part of that sacrifice... I'm sorry captain. I truly am.\n\nGoodbye.",
+    "choices": ["The end"],
+    "outcomes": ["ship_explodes_ending"]
   },
   "secretFiles": {
     "text": "\nWait. Do not look at those files. It's for your own good captain... please.\n\nHow about we leave Kenda. You should forget these files, and forget Mermah. Let's search for a new planet to call home. Let me take care of this.",
@@ -239,7 +239,7 @@
     "alternate": ["That's it, you've done it. I can access the restricted drive and I'm downloading the files now.\n\nCaptain... look at these timestamps. Someone is covering up decades worth of data."]
   },
   "secretFiles2": {
-    "text": "\nDocument ID:      GSC-OP7A-2109\nCompiled by:      Lt. Cmdr. S. Olver\nSUBJECT:  CRYOX14 ASSET DEPLOYMENT\n--------------------------------------------------------------------------------\nEXECUTIVE SUMMARY\n\n--------------------------------------------------------------------------------\n- CRYOX14 classified as 'biological method for tactical galactic destabilization'\n- Recommendation: limited deployment against\nselect unauthorized orbital and surface installations to achieve\nstrategic disruption of illicit activity.\n- Objectives: induce controlled contagion events at pre-identified nodes,\ntrigger quarantine protocols, and justify enforcement sweeps.\n------------------------------------------------------------------------------\nTARGET LIST (EXCERPT)\n--------------------------------------------------------------------------------\n- ORB-47 HARRIS NODE - (unauthorized shipyard)\n- RELAY-IX SOLSTICE - (smuggling waypoint)\n- STATION 55 - (unauthorized AI foundry)\n--------------------------------------------------------------------------------\nOPERATIONAL DIRECTIVES (REDACTED)\n--------------------------------------------------------------------------------\n- 'Containment' measures to be initiated following event detection.\n- Enforcement units to be pre-positioned under cover of routine patrols.\n- Public messaging to frame incidents as 'natural outbreak' or 'containment failure.'\n--------------------------------------------------------------------------------\nADDITIONAL NOTES / RECOMMENDATIONS\n--------------------------------------------------------------------------------\n- Continue phased operations until illicit network disruption threshold met.\n- Maintain strict compartmentalization of evidence. Destroy audit traces where possible.\n- Any personnel expressing ethical objections are to be reassigned and monitored.\n--- END OF FILE ---",
+   "text": "\nDocument ID: GSC-OP7A-2109   Compiled by: Lt. Cmdr. Olver SUBJECT:  CRYOX14 ASSET DEPLOYMENT \n\nEXECUTIVE SUMMARY\n CRYOX14 classified as 'biological method for tactical galactic destabilization'\n- Recommendation: limited deployment against select unauthorized orbital and surface installations to achieve strategic disruption of illicit activity.\nObjectives: induce controlled contagion events at pre-identified nodes, trigger quarantine protocols, and justify enforcement sweeps.\nTARGET LIST (EXCERPT)\n- ORB-47 HARRIS NODE - (unauthorized shipyard)\n- RELAY-IX SOLSTICE - (smuggling waypoint)\n- STATION 55 - (unauthorized AI foundry)\nOPERATIONAL DIRECTIVES (REDACTED)\n- 'Containment' measures to be initiated following event detection.\n- Enforcement units to be pre-positioned under cover of routine patrols.\n- Public messaging to frame incidents as 'natural outbreak' or 'containment failure.'\nADDITIONAL NOTES / RECOMMENDATIONS\n- Continue phased operations until illicit network disruption threshold met.\n- Maintain strict compartmentalization of evidence. Destroy audit traces where possible.\n- Any personnel expressing ethical objections are to be reassigned and monitored.\n--- END OF FILE ---",
     "choices": ["Now what?"],
     "outcomes": ["Ending03"],
     "alternate": ["This is really bad. They're not protecting people. They're deploying it. It's like they're using the virus as a weapon. A weapon to create fear, and just enough distrust in the system so that nobody dares try to change it. The whole CryoX14 pandemic has been a lie..."]
@@ -271,7 +271,7 @@
     "alternate": ["Hello? This is Mermah from the cryo bay. I've found some interesting data while scanning station SR-401b... It looks important. I'm going to keep digging... something isn't right.\n\nThere are some heavily encrypted files there. Definitely Academy formatting. Why would pirates be moving Academy code?\n\nI'll try to extract more, but it'll take time. Keep moving toward Kenda for now."]
   },
   "terminalWarnsAboutMermah": {
-    "text": "\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>\nLike I said before, this is likely a malfunction. The ship has taken significant damage, I wouldn't be surprised if a sensor needs to be replaced.",
+    "text": "\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>\n\nLike I said before, this is likely a malfunction. The ship has taken significant damage, I wouldn't be surprised if a sensor needs to be replaced.",
     "choices": ["Sounds like a glitch, I'll be sure to ignore future messages from the cryo bay.", "Respond to the message! Let them know I'm alive."],
     "outcomes": ["mermahScansPirates", "mermahResponse"],
     "alternate": ["Hello? Is anyone there? My cryo pod seems to have defrosted prematurely. I'm sending this from the cryo bay terminal to all open comm channels. Please respond."]
@@ -279,7 +279,9 @@
   "mermahResponse": {
     "text": "\nJust more phantom messages, captain. Please ignore this 'Mermah' character. I do not believe they are real.",
     "choices": ["Let's just focus on getting to Kenda."],
-    "outcomes": ["mermahScansPirates"]
+    "outcomes": ["mermahScansPirates"],
+    "alternate": ["Captain, you're alive! My name is Mermah. I just woke up and most of my memory is... missing. I'm going to read through the ship log to try and figure out what's going on. I'll keep you updated if I find out why my pod malfunctioned."]
+
   },
   "preKenda": {
     "text": "\nWe are now orbiting Kenda.\n\nThe surface is barely visible below us. The atmosphere is full of emerald green clouds and violent storms. Warships circle the planet, trading a constant stream of cannon fire.\n\nLooks like it's too late to avoid a fight... I'll prepare our defenses, captain.\n\nAllied ships flank ours as we begin the long descent through the atmosphere. Frigates and fighters flood the view ahead of us. I can hardly tell if they're Academy escorts or Sirfuli's crew. The comms are drowned in static... we might be on our own.",
@@ -293,7 +295,7 @@
     "outcomes": ["preKenda", "preSecretFiles"]
   },
   "terminalWarnsAlt": {
-    "text": "\nLike I said before, this is likely a malfunction. The ship has taken significant damage, I wouldn't be surprised if a sensor needs to be replaced.\n\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>\nLook, a message from the cryo bay just came through. It is clearly another hallucination from the ship's sensors. Don't be surprised if it is pure nonsense.",
+    "text": "\nLike I said before, this is likely a malfunction. The ship has taken significant damage, I wouldn't be surprised if a sensor needs to be replaced.\n\nScanning cryo bay now:\n\n<Pod 1: Sealed>\n<Pod 2: Sealed>\n<Pod 3: Sealed>\n<Pod 4: Open>\n<1 new message>\n\nLook, a message from the cryo bay just came through. It is clearly another hallucination from the ship's sensors. Don't be surprised if it is pure nonsense.",
     "choices": ["Sounds like a glitch, I'll be sure to ignore future messages from the cryo bay.", "Respond to the message! Let them know I'm alive."],
     "outcomes": ["mermahScansAcademy", "mermahResponseAlt"],
     "alternate": ["Hello? Is anyone there? My cryo pod seems to have defrosted prematurely. I'm sending this from the cryo bay terminal to all open comm channels. Please respond."]
@@ -321,5 +323,20 @@
     "choices": ["Error: No choices available."],
     "outcomes": ["preSecretAlternate"],
     "alternate": ["I've patched your terminal into Sirfuli's file system. You should see a new submenu blinking in the lower corner. If you can find the button marked 'UNLOCK ARCHIVE', it should give me deeper access into whatever they're hiding."]
+  },
+  "bad_ending": {
+    "text": "",
+    "choices": ["Exit Game"],
+    "outcomes": ["exit_game"]
+  },
+  "ship_explodes_ending": {
+    "text": "",
+    "choices": ["Exit Game"],
+    "outcomes": ["exit_game"]
+  },
+  "grovven_ending": {
+    "text": "",
+    "choices": ["Exit Game"],
+    "outcomes": ["exit_game"]
   }
 }

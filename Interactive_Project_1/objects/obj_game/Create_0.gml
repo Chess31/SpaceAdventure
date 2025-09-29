@@ -8,6 +8,7 @@ color_bleeding = 0.20;     // Color bleeding: 0.0 = none, 1.0 = strong
 
 //secret ending variables
 button_exists = false;
+ending_exists = false;
 
 // Global color system
 globalvar color_main;
